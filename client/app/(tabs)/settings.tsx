@@ -1,8 +1,8 @@
 import { useTheme } from "@/providers/ThemeProvider";
-import { Text, View } from "react-native";
+import { Switch, Text, View } from "react-native";
 
 export default function GameScreen() {
-  const { colors } = useTheme();
+  const { theme, colors, toggleTheme } = useTheme();
   return (
     <View
       style={{
@@ -12,7 +12,12 @@ export default function GameScreen() {
         backgroundColor: colors.bg,
       }}
     >
-      <Text>Game Screen</Text>
+      <Text>Settings</Text>
+      <Switch
+        value={theme === "dark"}
+        onValueChange={toggleTheme}
+        thumbColor={colors.primary}
+      />
     </View>
   );
 }

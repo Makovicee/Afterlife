@@ -25,7 +25,7 @@ export default function TabLayout() {
             <Ionicons
               name={focused ? "mail" : "mail-outline"}
               color={color}
-              size={30}
+              size={29}
             />
           ),
         }}
@@ -38,7 +38,7 @@ export default function TabLayout() {
             <MaterialCommunityIcons
               name={focused ? "account-group" : "account-group-outline"}
               color={color}
-              size={30}
+              size={29}
             />
           ),
         }}
@@ -51,7 +51,20 @@ export default function TabLayout() {
             <MaterialCommunityIcons
               name={focused ? "ghost" : "ghost-outline"}
               color={color}
-              size={30}
+              size={29}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              name={focused ? "settings" : "settings-outline"}
+              color={color}
+              size={29}
             />
           ),
         }}
