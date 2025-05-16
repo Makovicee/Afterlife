@@ -1,3 +1,4 @@
+import Header from "@/components/core/ui/texts/Header";
 import { useTheme } from "@/providers/ThemeProvider";
 import { Switch, Text, View } from "react-native";
 
@@ -12,6 +13,7 @@ export default function GameScreen() {
         backgroundColor: colors.bg,
       }}
     >
+      <Header title="Settings" />
       <Text>Settings</Text>
       <Switch
         value={theme === "dark"}
