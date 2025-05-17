@@ -19,10 +19,12 @@ export default function Index() {
     >
       <Header title="Inbox" />
       <Informant
-        Left={{ title: "Delivery", number: 5 }}
+        Left={{ title: "Delivered", number: 5 }}
         Right={{ title: "Sent", number: 2 }}
       />
-      <SearchBar />
+      <View style={{ width: "100%", alignItems: "center", marginTop: 20 }}>
+        <SearchBar />
+      </View>
     </View>
   );
 }

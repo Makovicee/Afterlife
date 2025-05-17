@@ -19,15 +19,12 @@ export default function Informant({ Left, Right }: InformantProps) {
           {Left.number}
         </Text>
       </View>
-      <View style={style.iconWrapper}>
-        <View style={style.drawer}>
-          <Text style={[style.text, { color: colors.text }]}>
-            {Right.title}
-          </Text>
-          <Text style={[style.number, { color: colors.ghostText }]}>
-            {Right.number}/5
-          </Text>
-        </View>
+
+      <View style={style.drawer}>
+        <Text style={[style.text, { color: colors.text }]}>{Right.title}</Text>
+        <Text style={[style.number, { color: colors.ghostText }]}>
+          {Right.number}/5
+        </Text>
         <Entypo
           style={style.icon}
           name="chevron-right"
@@ -44,12 +41,14 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
   },
   drawer: {
     display: "flex",
     flexDirection: "column",
     fontFamily: fontFamily.base,
+    width: 140,
+    justifyContent: "center",
   },
   text: {
     textAlign: "center",
@@ -62,13 +61,9 @@ const style = StyleSheet.create({
     fontFamily: fontFamily.base,
     fontSize: 16,
   },
-  iconWrapper: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
   icon: {
     alignItems: "center",
     position: "absolute",
-    left: 50,
+    left: 95,
   },
 });
